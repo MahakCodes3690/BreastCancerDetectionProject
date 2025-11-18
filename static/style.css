@@ -1,0 +1,85 @@
+/* style.css - simple clean styling */
+:root{
+  --bg: #fafafa;
+  --card: #ffffff;
+  --accent: #1766d9;
+  --muted: #6b7280;
+  --success: #0b8a3e;
+  --danger: #c92a2a;
+  --radius: 10px;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: Inter, Arial, sans-serif;
+  background: linear-gradient(180deg, #f8fbff, var(--bg));
+  color:#111827;
+  margin:0;
+  padding:28px;
+  line-height:1.4;
+}
+
+.container{
+  max-width:980px;
+  margin:0 auto;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15,23,42,0.03);
+}
+
+h2{ margin:0 0 10px 0; font-size:1.6rem; }
+p{ color:var(--muted); margin-top:6px; }
+
+pre#featList{
+  background:#f3f6fb; padding:10px; border-radius:6px; overflow:auto; font-size:0.92rem;
+}
+
+/* textareas and buttons */
+textarea{
+  width:100%;
+  min-height:90px;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  resize:vertical;
+  font-family:monospace;
+  font-size:0.95rem;
+}
+
+.row{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.btn{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+  margin-top:8px;
+  box-shadow: 0 6px 18px rgba(23,102,217,0.12);
+}
+.btn--muted{
+  background:#f3f4f6; color:#111827; box-shadow:none; border:1px solid #e6e9ef;
+}
+
+/* result area */
+#result{
+  background:#fff;
+  border-radius:8px;
+  padding:12px;
+  margin-top:12px;
+  border:1px dashed #eef2ff;
+  white-space:pre-wrap;
+  font-family:monospace;
+}
+
+.err{ color:var(--danger); margin-top:8px; }
+
+/* responsive */
+@media (max-width:640px){
+  .row{ flex-direction:column; align-items:stretch; }
+  .container{ padding:16px; }
+}
